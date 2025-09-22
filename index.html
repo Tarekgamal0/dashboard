@@ -25,11 +25,11 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      /* @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
+      } */
     </style>
   </head>
   <body>
@@ -50,7 +50,8 @@
     </svg>
 
     <main class="d-flex flex-nowrap bg-dark text-white">
-      <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 30%; height: 100vh">
+      <!--Sidebar-->
+      <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 20%; height: 100vh">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <i class="bi bi-lightning-charge me-2 fs-2"></i>
           <span class="fs-4">Sidebar</span>
@@ -63,8 +64,8 @@
               Home
             </a>
           </li>
-          <li>
-            <a href="#" class="nav-link text-white">
+          <li class="nav-item">
+            <a href="./user/add.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
               Add Customers
             </a>
@@ -91,10 +92,11 @@
           </ul>
         </div>
       </div>
-
+      <!--Divider-->
       <div class="b-example-divider"></div>
-
+      <!--Right Section-->
       <section class="w-100">
+        <!--Navigator-->
         <nav class="navbar bg-body-secondary" data-bs-theme="dark">
           <div class="container-fluid justify-content-center justify-content-md-between">
             <h1>
@@ -106,9 +108,9 @@
             </form>
           </div>
         </nav>
-
+        <!--Table-->
         <table
-          class="table table-dark table-striped table-hover table-bordered text-center align-middle mt-5 mx-auto"
+          class="table table-dark table-striped table-hover table-bordered text-center align-middle mt-5 mx-auto overflow-auto"
           style="width: 98%"
         >
           <thead>
@@ -209,7 +211,6 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-
     <script src="js/sidebars.js"></script>
   </body>
 </html>
