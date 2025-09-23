@@ -15,7 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="css/sidebars.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap-icons-1.11.3/font/bootstrap-icons.css" />
-
+    <link href="css/myCSS.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -29,27 +29,6 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
-
-      .sidebar {
-        transition: 1s;
-        align-items: center;
-      }
-      .sidebar-small {
-        width: 75px;
-      }
-      .sidebar-small .nav-text {
-        display: none;
-      }
-      .sidebar-small #close-btn {
-        display: none;
-      }
-      .sidebar-small #open-btn {
-        display: block !important;
-      }
-      .sidebar-small .bi-lightning-charge {
-        transition: 1s;
-        transform: rotateY(360deg);
       }
     </style>
   </head>
@@ -74,21 +53,12 @@
       <!--Sidebarr-->
       <div id="sidebar-id" class="d-flex flex-column flex-shrink-0 p-3 position-relative sidebar">
         <!--Close and Open Buttons-->
-        <button id="close-btn" class="btn p-0 position-absolute top-0 end-0" data-bs-theme="dark" style="width: 30px">
+        <button id="toggle-btn" class="btn p-0 position-absolute top-0 end-0" data-bs-theme="dark" style="width: 30px">
           <i class="bi bi-x-circle fs-3"></i>
         </button>
-
-        <button
-          id="open-btn"
-          class="btn p-0 position-absolute top-0 end-75 d-none"
-          data-bs-theme="dark"
-          style="width: 30px"
-        >
-          <i class="bi bi-arrow-right-circle fs-3"></i>
-        </button>
         <!--Logo-->
-        <a href="/" class="d-flex mt-4 text-white text-decoration-none w-100">
-          <i class="bi bi-lightning-charge fs-3 m-auto logo"></i>
+        <a href="/" class="text-white text-decoration-none w-100 align-items-center">
+          <i class="bi bi-lightning-charge fs-2 me-3 logo"></i>
           <span class="fs-3 nav-text">Sidebar</span>
         </a>
         <hr class="w-100" />
@@ -248,16 +218,6 @@
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/sidebars.js"></script>
-    <script>
-      let sidebar = document.getElementById("sidebar-id");
-      let closeBtn = document.getElementById("close-btn");
-      let openBtn = document.getElementById("open-btn");
-      closeBtn.addEventListener("click", () => {
-        sidebar.classList.add("sidebar-small");
-      });
-      openBtn.addEventListener("click", () => {
-        sidebar.classList.remove("sidebar-small");
-      });
-    </script>
+    <script src="./js/myJS.js"></script>
   </body>
 </html>

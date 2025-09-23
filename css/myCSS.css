@@ -1,0 +1,26 @@
+.sidebar {
+  width: 250px;
+  transition: 0.5s;
+  align-items: left;
+}
+.sidebar-small {
+  width: 75px;
+  align-items: center;
+}
+.sidebar-small .nav-text {
+  display: none;
+}
+
+.sidebar-small .bi-lightning-charge::before {
+  content: "\F46C";
+  transition: 1s;
+  transform: rotateY(360deg);
+  margin-top: 3rem;
+}
+
+.sidebar-small .bi-x-circle::before {
+  content: "\F134";
+}
+.sidebar-small #toggle-btn {
+  margin-right: 25px;
+}
