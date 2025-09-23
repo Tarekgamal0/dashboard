@@ -6,15 +6,15 @@
     <meta name="description" content="" />
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Hugo 0.84.0" />
-    <title>Main Page</title>
+    <title>Search</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/" />
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="css/sidebars.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/bootstrap-icons-1.11.3/font/bootstrap-icons.css" />
+    <link href="../css/sidebars.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap-icons-1.11.3/font/bootstrap-icons.css" />
 
     <style>
       .bd-placeholder-img {
@@ -25,32 +25,11 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      /* @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
-
-      .sidebar {
-        transition: 1s;
-        align-items: center;
-      }
-      .sidebar-small {
-        width: 75px;
-      }
-      .sidebar-small .nav-text {
-        display: none;
-      }
-      .sidebar-small #close-btn {
-        display: none;
-      }
-      .sidebar-small #open-btn {
-        display: block !important;
-      }
-      .sidebar-small .bi-lightning-charge {
-        transition: 1s;
-        transform: rotateY(360deg);
-      }
+      } */
     </style>
   </head>
   <body>
@@ -71,43 +50,31 @@
     </svg>
 
     <main class="d-flex flex-nowrap bg-dark text-white">
-      <!--Sidebarr-->
-      <div id="sidebar-id" class="d-flex flex-column flex-shrink-0 p-3 position-relative sidebar">
-        <!--Close and Open Buttons-->
-        <button id="close-btn" class="btn p-0 position-absolute top-0 end-0" data-bs-theme="dark" style="width: 30px">
-          <i class="bi bi-x-circle fs-3"></i>
-        </button>
-
-        <button
-          id="open-btn"
-          class="btn p-0 position-absolute top-0 end-75 d-none"
-          data-bs-theme="dark"
-          style="width: 30px"
+      <!--Sidebar-->
+      <div class="d-flex flex-column flex-shrink-0 p-3 w-20" style="width: 20%">
+        <a
+          href="../index.html"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
-          <i class="bi bi-arrow-right-circle fs-3"></i>
-        </button>
-        <!--Logo-->
-        <a href="/" class="d-flex mt-4 text-white text-decoration-none w-100">
-          <i class="bi bi-lightning-charge fs-3 m-auto logo"></i>
-          <span class="fs-3 nav-text">Sidebar</span>
+          <i class="bi bi-lightning-charge me-2 fs-2"></i>
+          <span class="fs-4">Sidebar</span>
         </a>
-        <hr class="w-100" />
-        <!--List-->
+        <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
+            <a href="../index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
-              <span class="nav-text">Home</span>
+              Home
             </a>
           </li>
           <li class="nav-item">
-            <a href="./user/add.html" class="nav-link text-white">
+            <a href="./add.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-              <span class="nav-text">Add Customers</span>
+              Search
             </a>
           </li>
         </ul>
-        <hr class="w-100" />
+        <hr />
         <div class="dropdown">
           <a
             href="#"
@@ -117,7 +84,7 @@
             aria-expanded="false"
           >
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
-            <strong class="nav-text">Tarek</strong>
+            <strong>Tarek</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -131,10 +98,10 @@
       <!--Divider-->
       <div class="b-example-divider"></div>
       <!--Right Section-->
-      <section class="w-100">
+      <section class="d-flex flex-column w-100 overflow-auto">
         <!--Navigator-->
         <nav class="navbar bg-body-secondary" data-bs-theme="dark">
-          <div class="container-fluid justify-content-center justify-content-md-between">
+          <div class="container-fluid flex-wrap justify-content-center justify-content-md-between">
             <h1>
               <a class="navbar-brand fs-2" href="#">Course <sup>4</sup> arab </a>
             </h1>
@@ -143,6 +110,13 @@
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
+        </nav>
+        <!--Breadcrumb-->
+        <nav class="mt-4 px-2 ms-3" style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ali Hassan</li>
+          </ol>
         </nav>
         <!--Table-->
         <table
@@ -155,8 +129,6 @@
               <th scope="col">Full Name</th>
               <th scope="col">Gender</th>
               <th scope="col">Country</th>
-              <th scope="col">age</th>
-              <th scope="col">Last updated</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -166,48 +138,6 @@
               <td>Ali Hassan</td>
               <td>Male</td>
               <td>Egypt</td>
-              <td>30</td>
-              <td>1 days ago</td>
-              <td>
-                <div class="d-flex justify-content-center">
-                  <a
-                    class="btn btn-primary btn-sm me-2"
-                    href="user/view.html"
-                    data-bs-toggle="tooltip"
-                    data-bs-title="View Details"
-                    data-bs-placement="left"
-                  >
-                    <i class="bi bi-eye"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-primary btn-sm me-2"
-                    href="user/edit.html"
-                    data-bs-toggle="tooltip"
-                    data-bs-title="Edit User"
-                    data-bs-placement="top"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </a>
-
-                  <button
-                    class="btn btn-danger btn-sm"
-                    data-bs-toggle="tooltip"
-                    data-bs-title="Delete User"
-                    data-bs-placement="bottom"
-                  >
-                    <i class="bi bi-trash"></i>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Layla Sayed</td>
-              <td>Female</td>
-              <td>Saudi Arabia</td>
-              <td>15</td>
-              <td>2 days ago</td>
               <td>
                 <div class="d-flex justify-content-center">
                   <a
@@ -246,18 +176,7 @@
       </section>
     </main>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/sidebars.js"></script>
-    <script>
-      let sidebar = document.getElementById("sidebar-id");
-      let closeBtn = document.getElementById("close-btn");
-      let openBtn = document.getElementById("open-btn");
-      closeBtn.addEventListener("click", () => {
-        sidebar.classList.add("sidebar-small");
-      });
-      openBtn.addEventListener("click", () => {
-        sidebar.classList.remove("sidebar-small");
-      });
-    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/sidebars.js"></script>
   </body>
 </html>
